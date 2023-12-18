@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense tracker</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 550px;
+    }
+
+    h1, h2 {
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+            font-weight: bold;
+            text-align: left;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+    .form-control {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: left;
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        background-color: #4caf50;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .btn-primary:hover {
+            background-color: #589858;
+        }
+
+    a {
+        color: rgb(107, 166, 95); 
+        text-decoration: none;
+        font-weight: bold; 
+        transition: color 0.3s; 
+    }
+
+    a:hover {
+        color: #0056b3; 
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <h2>Singup</h2>
+        <form>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username:</label>
+                <input type="text"  class="form-control" id="username" name="username" required> 
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="text" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password"  class="form-control" id="password" name="password" required>
+            </div>
+            <div class="mb-3">
+                <button  class="btn btn-primary" id="signup-btn">Singup</button>
+            </div>
+            <div class="mb-3">
+                <a href="../Login/login.html">Existing user-Login</a>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    <script src="./signup.js"></script>
+</body>
+</html>

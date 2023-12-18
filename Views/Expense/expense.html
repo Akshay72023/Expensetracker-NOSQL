@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+
+        /* .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            
+            width: 400px;
+            height: 400px;
+            margin-top: 25px;
+        }  */
+
+        form-label {
+            font-weight: bold;
+            text-align: left;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            width: 70%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            width: 30%;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #589858;
+        }
+
+        select.form-control {
+            height: 38px;
+        }
+
+        #addexpense.clicked {
+            background-color: #4caf50;
+        }
+
+        .button-container {
+        display: flex;
+        gap: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Expenses</h1>
+        <form id="my-form" >
+            <div class="mb-3">
+                <label for="amount" class="form-label">Expense Amount:</label>
+                <input type="number" class="form-control" id="amount">
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Expense Description:</label>
+                <input type="text" class="form-control" id="description">
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Expense Category:</label>
+                <select class="form-control" id="category">
+                    <option value="food">Food</option>
+                    <option value="fuel">Fuel</option>
+                    <option value="movie">Movie</option>
+                    <option value="electricity">Electricity</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" id="addexpense">Add Expense</button>
+            </div>
+        </form>
+            <button class="btn btn-primary" id="rzp-button1">Buy Premium</button>
+            <div >
+                <h3 id="Premium user message"></h3>
+                <div id="premium" class="button-container"></div>
+                
+            </div>
+            <br>
+            <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <div id="downloadmessage"></div>
+        <h3>Expenses display</h3>
+        <div class="items-controller">
+            <h5>Show 
+          <select id = "Item_Per_Page">
+            <option value="2">02</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="8">08</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="0">50</option>
+          </select>
+          Per Page</h5>
+          </div>
+        <h2>Expenses</h2>
+        <ul class="items"></ul>
+        <div id="pagination-container"  style="display: flex; justify-content: center; align-items: center;"></div>
+        <div id="leaderboard"></div>
+        <div id="reportlist"></div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    <script src="expense.js"></script>
+</body>
+</html>
